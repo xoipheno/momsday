@@ -1,328 +1,222 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Открытка Сибиряков</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
- * {
-  background-color: #e5d3e8;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* === HEADER === */
-
-header {
-  background-color: pink;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #ccc9c9;
-}
-
-.header-div {
-  background-color: aliceblue;
-  width: 100%;
-  max-width: 1900px; /* Ограничиваем ширину */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px;
-  margin: 0 auto;
-}
-
-.header-div-logo {
-  background-color: aliceblue;
-}
-
-.header-logo {
-  background-color: aliceblue;
-  width: 160px;
-  height: 32px;
-}
-
-.back-button {
-  background-color: aliceblue;
-  margin-right: 100px;
-  margin-top: 55px;
-  margin-bottom: 54px;
-}
-
-.back-button a {
-  background-color: aliceblue;
-  text-decoration: none;
-  color: black;
-}
-
-/* === MAIN === */
-
-.main-div {
-  position: relative;
-  margin-top: 84px;
-  margin-bottom: 20px;
-  padding: 9px;
-  border-top: 85px solid white;
-  border-bottom: 85px solid white;
-  background-color: pink;
-  text-align: center;
-}
-
-.rec {
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto;
-}
-
-.rec-div {
-  text-align: center;
-}
-
-.title {
-  position: absolute;
-  right: 40%;
-  bottom: 125%;
-}
-
-.title2 {
-  position: absolute;
-  right: 46%;
-  bottom: 106%;
-  background-color: aliceblue;
-}
-
-.main-text {
-  position: absolute;
-  left: 65%;
-  bottom: 10%;
-}
-
-/* === FOOTER === */
-
-footer {
-  background-color: aliceblue;
-  max-width: 100%;
-  border-top: 2px solid #c5c1c1;
-}
-
-.footer-div {
-  background-color: aliceblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-}
-
-p {
-  width: 700px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  background-color: aliceblue;
-}
-
-.footer-logo-svg {
-  background-color: aliceblue;
-  width: 160px;
-  height: 32px;
-}
-
-.footer-logo {
-  background-color: aliceblue;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-.footer-text-2025 {
-  background-color: aliceblue;
-  margin-left: 100px;
-  margin-top: 53px;
-  margin-bottom: 33px;
-}
-
-.footer-text-group {
-  margin-right: 100px;
-  margin-top: 65px;
-  margin-bottom: 45px;
-}
-
-/* === АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ === */
-
-/* Планшеты и большие мобильные */
-@media (max-width: 1024px) {
-  .header-div {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .back-button {
-    margin-right: 0;
-    margin-top: 20px;
-  }
-
-  .main-text {
-    position: static;
-    margin-top: 20px;
-  }
-
-  .title, .title2 {
-    position: static;
-  }
-
-  .footer-div {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-text-2025, .footer-text-group {
-    margin: 10px;
-  }
-
-  p {
-    width: 90%;
-    max-width: 500px;
-  }
-}
-
-/* Мобильные устройства */
-@media (max-width: 768px) {
-  * {
-    font-size: 14px;
-  }
-
-  .header-div {
-    padding: 10px 5px;
-  }
-
-  .header-logo, .footer-logo-svg {
-    width: 120px;
-    height: 24px;
-  }
-
-  .main-div {
-    margin-top: 20px;
-    padding: 10px;
-    border-top: 20px solid white;
-    border-bottom: 20px solid white;
-  }
-
-  .rec {
-    width: 90%;
-  }
-
-  .main-text, .title, .title2 {
-    position: static;
-    margin-top: 10px;
-  }
-
-  .footer-logo {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .footer-text-2025, .footer-text-group {
-    margin: 10px;
-    text-align: center;
-  }
-
-  p {
-    width: 95%;
-    font-size: 13px;
-  }
-}
-
-/* Очень маленькие экраны (например, iPhone SE) */
-@media (max-width: 480px) {
-  * {
-    font-size: 12px;
-  }
-
-  .header-div {
-    padding: 5px;
-  }
-
-  .header-logo, .footer-logo-svg {
-    width: 100px;
-    height: 20px;
-  }
-
-  .back-button a {
-    font-size: 14px;
-  }
-
-  .main-div {
-    padding: 5px;
-  }
-
-  .rec {
-    width: 95%;
-  }
-
-  .footer-div {
-    padding: 5px;
-  }
-
-  .footer-text-2025, .footer-text-group {
-    font-size: 12px;
-  }
-}
-</style>
-
-  </head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сибиряков Ярослав - Портфолио разработчика</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <header>
-    <div class="header-div">
-      <div class="header-div-logo">
-        <img class="header-logo" src="img/logo.svg" alt=""	>
-      </div>
-      <div class="back-button">
-        <a href="https://denmami2025midis.tilda.ws/">Назад</a>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+			<div class="logo-container">
+                <a href="#" class="logo-link">
+                    <img src="img/logo.png" alt="Логотип Сибиряков Ярослав" class="logo-img">
+                </a>
+            </div>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#services">Услуги</a>
+                <a href="#order">Заявка</a>
+            </nav>
+            
+            <div class="header-content">
+                <h1 class="logo">Сибиряков <span>Ярослав</span></h1>
+                <p class="tagline">Мое портфолио</p>
+                <h2 class="tagline">Решение всех ваших кодинг-проблем в одном месте</h2>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <div class="main-div">
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часть моих работ</h2>
+            </div>
+            
+            <div class="works-grid">
+                <div class="work-card">
+                    <div class="work-image">
+                        <a href="img/ff.jpg" target="_blank" rel="noopener noreferrer">
+                            <img src="img/ff.jpg" alt="Сайт 1 работа" class="thumbnail">
+                        </a>
+                    </div>
+                    <div class="work-content">
+                        <a href="https://xoipheno.github.io/site808/" target="_blank" 
+                           rel="noopener noreferrer" class="work-link">
+                            <h3>Сайт визитка</h3>
+                        </a>
+                        <p class="work-description">Современный сайт с адаптивным дизайном</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-image">
+                        <a href="img/ff2.jpg" target="_blank" rel="noopener noreferrer">
+                            <img src="img/ff2.jpg" alt="Сайт 2 работа" class="thumbnail">
+                        </a>
+                    </div>
+                    <div class="work-content">
+                        <a href="https://xoipheno.github.io/siteofbee100/#" target="_blank" 
+                           rel="noopener noreferrer" class="work-link">
+                            <h3>Пчелиный сайт</h3>
+                        </a>
+                        <p class="work-description">Корпоративный сайт с интерактивными элементами</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-image">
+                        <a href="img/ff3.jpg" target="_blank" rel="noopener noreferrer">
+                            <img src="img/ff3.jpg" alt="Сайт 3 пример" class="thumbnail">
+                        </a>
+                    </div>
+                    <div class="work-content">
+                        <a href="https://xoipheno.github.io/momday/" target="_blank" 
+                           rel="noopener noreferrer" class="work-link">
+                            <h3>Сайт ко дню матери</h3>
+                        </a>
+                        <p class="work-description">Статичный сайт - открытка</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Мои услуги</h2>
+            </div>
+            
+            <div class="works-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Разработка сайтов</h3>
+                    <p>Напишем ваш сайт с нуля под заказ. Современные технологии, адаптивный дизайн, индивидуальный подход.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Мобильные приложения</h3>
+                    <p>Разработка кроссплатформенных мобильных приложений для iOS и Android. Нативные и гибридные решения.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Техническая поддержка</h3>
+                    <p>Обслуживание и поддержка ваших IT-проектов. Оптимизация, доработка, исправление ошибок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="order" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Оставьте заявку</h2>
+            </div>
+            
+            <div class="order-form">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Ваш email:</label>
+                        <input type="email" id="email" class="form-control" placeholder="example@mail.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project">Тип проекта:</label>
+                        <select id="project" class="form-control" required>
+                            <option value="" disabled selected>Выберите тип проекта</option>
+                            <option value="website">Веб-сайт</option>
+                            <option value="app">Мобильное приложение</option>
+                            <option value="support">Техническая поддержка</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Описание проекта:</label>
+                        <textarea id="description" class="form-control" placeholder="Подробно опишите ваш проект, требования и сроки..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-accent btn-block">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-      <div class="rec-div">
-	  <H1>Мама, с Днём матери!</H1>
+    <footer>
+        <div class="container">
+            <p>Сибиряков Ярослав &copy; <span id="currentYear"></span>. Все права защищены.</p>
+            <p class="copyright">Решение всех ваших кодинг-проблем в одном месте</p>
+        </div>
+    </footer>
 
- <P>Ты — мой первый друг, моя самая надежная опора, мой дом, даже когда я далеко.
-Спасибо тебе за каждое утро с чашкой чая, за твои бесконечные объятия, за твою мудрость, которую я понимаю только теперь, когда стал взрослым.
-Ты учила меня доброте, терпению, силе — не словами, а примером.
-Я не всегда говорю это вслух, но я бесконечно благодарен за то, что ты есть.</p>
-      <img class="rec" src="img/rp1p.jpg" alt="#">
-      </div>
-
-    </div>
-
-  </main>
-
-  <footer>
-    <div class="footer-div">
-      <div class="footer-text-2025">
-        <p>Сделано студентами
-          © 2025</p>
-      </div>
-      <div class="footer-logo">
-        <img class="footer-logo-svg" src="img/logo.svg" alt="">
-		
-      </div>
-      <div class="footer-text-group">
-        <p>Группа П-11, П-19</p>
-      </div>
-    </div>
-  </footer>
-
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const project = document.getElementById('project').value;
+            
+            alert(`Спасибо, ${name}! Ваша заявка на "${project}" принята. Мы свяжемся с вами по адресу ${email} в ближайшее время.`);
+            
+            this.reset();
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                if (href === '#' || this.getAttribute('target') === '_blank') {
+                    return;
+                }
+                
+                e.preventDefault();
+                
+                const targetId = href;
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        window.addEventListener('load', function() {
+            const header = document.querySelector('header');
+            const firstSection = document.querySelector('.section');
+            
+            if (header && firstSection) {
+                firstSection.style.scrollMarginTop = header.offsetHeight + 'px';
+                
+                document.querySelectorAll('section[id]').forEach(section => {
+                    section.style.scrollMarginTop = header.offsetHeight + 'px';
+                });
+            }
+        });
+    </script>
 </body>
-
-
 </html>
-
